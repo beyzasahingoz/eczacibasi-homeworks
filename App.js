@@ -1,12 +1,11 @@
-import Main from "./Main";
-import './App.css';
+import axios from 'axios';
 
-function App() {
-  return (
-    <>
-      <Main/>
-    </>
-  );
+async function getData(userId) {
+    const { data: user } = await axios
+        ("https://jsonplaceholder.typicode.com/users/${id}");
+    const { data: posts } = await axios
+        ("https://jsonplaceholder.typicode.com/posts?userId=${id}");
+    const newReq = { firstReq, Posts: secondReq }; 
+    console.log(newReq);
 }
-
-export default App;
+export default getData;
